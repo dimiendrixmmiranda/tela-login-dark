@@ -1,0 +1,39 @@
+#toggle
+    position: absolute
+    top: 2%
+    right: 2%
+    width: 50px
+    height: 25px
+    appearance: none
+    box-shadow: 0 2px 5px 2px black
+    outline: none
+    border-radius: 20px
+    background-color: #72e0ad
+    transition: .6s
+    cursor: pointer
+    &:checked
+        background-color: #019c4f
+    &::before
+        content: ''
+        width: 25px
+        height: 25px
+        border-radius: 50%
+        position: absolute
+        border: solid 1px black
+        background-color: #222
+        scale: 1.05
+        transition: .6s
+        transform: translate(0, -1px)
+        background-image: url('./imgs/sol.png')
+        background-size: 80%
+        background-repeat: no-repeat
+        background-position: center
+    &:checked
+        &::before
+            transition: .6s
+            transform: translate(calc( 100% - 5px ), -1px)
+            background-image: url('./imgs/lua.png')
+            background-size: 80%
+            background-repeat: no-repeat
+            background-position: center
+            background-color: #f0f0f0

@@ -1,0 +1,219 @@
+@import 'https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #201b2c;
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  width: 100vw;
+  background-color: #201b2c;
+  display: flex;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  flex-direction: column;
+  row-gap: 1em;
+}
+@media screen and (min-width: 992px) {
+  .login {
+    flex-direction: row;
+    height: 100vh;
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .login {
+    width: 80vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .login {
+    width: 70vw;
+  }
+}
+.login .login__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+@media screen and (min-width: 992px) {
+  .login .login__left {
+    width: 50vw;
+    height: 100vh;
+  }
+}
+.login .login__left h1 {
+  color: #77ffc0;
+  font-size: 2.5em;
+  text-align: center;
+  max-width: 80%;
+}
+.login .login__left .login__left__img {
+  width: 80%;
+}
+@media screen and (min-width: 425px) {
+  .login .login__left .login__left__img {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .login .login__left .login__left__img {
+    width: 55%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .login .login__left .login__left__img {
+    width: 70%;
+  }
+}
+.login .login__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .login .login__right {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .login .login__right {
+    width: 50vw;
+    height: 100vh;
+  }
+}
+.login .login__right .login__right__card {
+  width: 85vw;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5em;
+  background-color: #2f2841;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.337254902);
+}
+@media screen and (min-width: 992px) {
+  .login .login__right .login__right__card {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .login .login__right .login__right__card {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .login .login__right .login__right__card {
+    width: 70%;
+  }
+}
+.login .login__right .login__right__card h1 {
+  color: #00ff88;
+  font-weight: 800;
+  margin-bottom: 0.3em;
+  font-size: 2em;
+}
+@media screen and (min-width: 1200px) {
+  .login .login__right .login__right__card h1 {
+    font-size: 2.8em;
+  }
+}
+.login .login__right .login__right__card .container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 5px;
+  margin-bottom: 1.2em;
+}
+.login .login__right .login__right__card .container label {
+  color: rgba(240, 255, 255, 0.8705882353);
+}
+.login .login__right .login__right__card .container input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8em;
+  background-color: #514869;
+  color: rgba(240, 255, 255, 0.8705882353);
+  font-size: 1em;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.337254902);
+  outline: none;
+}
+.login .login__right .login__right__card .container input::-moz-placeholder {
+  color: rgba(240, 255, 255, 0.5803921569);
+}
+.login .login__right .login__right__card .container input::placeholder {
+  color: rgba(240, 255, 255, 0.5803921569);
+}
+.login .login__right .login__right__card .login__right__btn {
+  width: 100%;
+  padding: 16px 0;
+  margin: 25px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  cursor: pointer;
+  background-color: #00ff88;
+  box-shadow: 0 10px 40px -12px rgba(0, 255, 128, 0.3215686275);
+}
+
+#toggle {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 50px;
+  height: 25px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  box-shadow: 0 2px 5px 2px black;
+  outline: none;
+  border-radius: 20px;
+  background-color: #72e0ad;
+  transition: 0.6s;
+  cursor: pointer;
+}
+#toggle:checked {
+  background-color: #019c4f;
+}
+#toggle::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  border: solid 1px black;
+  background-color: #222;
+  scale: 1.05;
+  transition: 0.6s;
+  transform: translate(0, -1px);
+  background-image: url("./imgs/sol.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#toggle:checked::before {
+  transition: 0.6s;
+  transform: translate(calc(100% - 5px), -1px);
+  background-image: url("./imgs/lua.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f0f0f0;
+}/*# sourceMappingURL=style.css.map */
